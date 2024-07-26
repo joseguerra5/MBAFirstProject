@@ -7,13 +7,16 @@
 }
 
 body {
-  background-image: url(main-image.png);
+  background-image: url(/assets/main-image.png);
   backdrop-filter: blur(20px); 
   display: flex;
   background-size: cover;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: 0;
+  /* box-sizing: border-box; tira o padrão da caixa */
+  /* margin: auto; alinha ao meio */
 }
 
 div{
@@ -63,4 +66,10 @@ footer p {
   font-size: 16px;
   font-weight: 150%;
   color: #F0E8C2;
+}
+
+footer p img{
+  vertical-align: middle;
+  color: #F0E8C2;
+  padding:0px 5px;
 }
