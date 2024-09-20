@@ -4,13 +4,15 @@
   --text-color-primary: #291B1A;
   --text-color-secondary: #573A37;
   --text-color-on-bg: #F0E8C2;
+
+  --px-lg: 4rem;
 }
 
 body {
   background-image: url(/assets/main-image.png);
+  background-size: cover;
   backdrop-filter: blur(20px); 
   display: flex;
-  background-size: cover;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -72,4 +74,17 @@ footer p img{
   vertical-align: middle;
   color: #F0E8C2;
   padding:0px 5px;
+}
+
+.container {
+  --max-width: 375px;
+  width: min(var(--max-width), 100% - var(--px-lg) * 2);
+  margin-inline: auto;
+}
+
+
+@media (width >= 80em) {
+  .container {
+    --max-width: 80rem
+  }
 }
